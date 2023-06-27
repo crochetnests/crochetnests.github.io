@@ -14,8 +14,8 @@
         navigator.serviceWorker.register('sw.js');
 
         window.addEventListener('beforeinstallprompt', event => {
-            // event.prompt();
           event.preventDefault();
+          event.prompt();
         //   var button = document.querySelector('button');
         //   button.addEventListener('click', () => {
         //   });
