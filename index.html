@@ -9,18 +9,18 @@
       you to use <code>prompt()</code> on the deferred event.
     </p>
     <button>Show Prompt</button>
+    <button href="https://crochetnests.github.io/" target="_blank">Link</button>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
 
         window.addEventListener('beforeinstallprompt', event => {
           event.preventDefault();
-          event.prompt();
-        //   var button = document.querySelector('button');
-        //   button.addEventListener('click', () => {
-        //   });
+          var button = document.querySelector('button');
+          button.addEventListener('click', () => {
+            event.prompt();
+          });
 
-        //   button.click();
         });
       }
     </script>
