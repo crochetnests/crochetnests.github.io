@@ -14,13 +14,13 @@
         navigator.serviceWorker.register('sw.js');
 
         window.addEventListener('beforeinstallprompt', event => {
-          event.preventDefault();
-          var button = document.querySelector('button');
-          button.addEventListener('click', () => {
-            event.prompt();
-          });
+        //   event.preventDefault();
+        //   var button = document.querySelector('button');
+        //   button.addEventListener('click', () => {
+        //     event.prompt();
+        //   });
 
-          button.click();
+        //   button.click();
         });
       }
     </script>
