@@ -15,18 +15,6 @@
     <script>
 
       /*
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
-
-        window.addEventListener('beforeinstallprompt', event => {
-          event.preventDefault();
-          var button = document.querySelector('button');
-          button.addEventListener('click', () => {
-            event.prompt();
-          });
-
-        });
-      }
       */
         var button = document.querySelector('button');
         button.addEventListener('click', () => {
@@ -57,6 +45,20 @@
         });
       
       document.querySelector('#my-manifest').setAttribute('href', '/manifest.json');
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+
+        window.addEventListener('beforeinstallprompt', event => {
+          event.preventDefault();
+          var button = document.querySelector('button');
+          button.innerHTML = "before install prompt";
+          button.addEventListener('click', () => {
+            event.prompt();
+          });
+
+        });
+      }
     </script>
   </body>
 </html>
