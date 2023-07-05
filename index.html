@@ -30,6 +30,7 @@
       */
         var button = document.querySelector('button');
         button.addEventListener('click', () => {
+          /*
           const myDynamicManifest = {
           "name": "PWA Test",
           "short_name": "PWA Test",
@@ -52,6 +53,8 @@
         const blob = new Blob([stringManifest], {type: 'application/json'});
         const manifestURL = URL.createObjectURL(blob);
         document.querySelector('#my-manifest').setAttribute('href', manifestURL);
+        */
+        document.querySelector('#my-manifest').setAttribute('href', '/manifest.json');
         });
       
     </script>
