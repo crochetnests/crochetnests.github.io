@@ -31,8 +31,12 @@
         var button = document.querySelector('button');
         button.addEventListener('click', () => {
           const myDynamicManifest = {
-          "short_name": "PWA Test",
           "name": "PWA Test",
+          "short_name": "PWA Test",
+          "background_color": "#FFFFFF",
+          "display": "standalone",
+          "start_url": "./",
+          "scope": "./",
           "icons": [
             {
               "src": "https://raw.githubusercontent.com/jeffposnick/create-react-pwa/master/favicon.ico",
@@ -40,8 +44,9 @@
               "type": "image/png"
             }
           ],
-          "start_url": "./",
-          "display": "standalone"
+          "theme_color": "#FFFFFF",
+          "related_applications": [],
+          "shortcuts": []
         };
         const stringManifest = JSON.stringify(myDynamicManifest);
         const blob = new Blob([stringManifest], {type: 'application/json'});
